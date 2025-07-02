@@ -1,7 +1,5 @@
 FROM node:22-alpine
-RUN echo "=== Node.js test starting ==="
-RUN node --version
-RUN npm --version
-RUN echo "Available memory:"
-RUN node -e "console.log('Heap Total:', Math.round(process.memoryUsage().heapTotal / 1024 / 1024), 'MB')"
-RUN echo "=== Node.js test completed ==="
+RUN echo "=== pnpm installation test ==="
+RUN npm install -g pnpm
+RUN pnpm --version
+RUN echo "=== pnpm installation completed ==="
